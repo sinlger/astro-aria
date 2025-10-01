@@ -70,67 +70,33 @@ window.evaluateHeaderPosition = () => {
 };
 
 document.getElementById("darkToggle").addEventListener("click", () => {
-	document.documentElement.classList.add("duration-300");
-
 	if (document.documentElement.classList.contains("dark")) {
 		localStorage.removeItem("dark_mode");
-		showDay(true);
+		showDay();
 	} else {
 		localStorage.setItem("dark_mode", true);
-		showNight(true);
+		showNight();
 	}
 });
 
-function showDay(animate) {
-	document.getElementById("sun").classList.remove("setting");
-	document.getElementById("moon").classList.remove("rising");
+function showDay() {
+	document.getElementById("dayText").classList.remove("hidden");
+	document.getElementById("nightText").classList.add("hidden");
 
-	let timeout = 0;
+	document.getElementById("moon").classList.add("hidden");
+	document.getElementById("sun").classList.remove("hidden");
 
-	if (animate) {
-		timeout = 500;
-
-		document.getElementById("moon").classList.add("setting");
-	}
-
-	setTimeout(() => {
-		document.getElementById("dayText").classList.remove("hidden");
-		document.getElementById("nightText").classList.add("hidden");
-
-		document.getElementById("moon").classList.add("hidden");
-		document.getElementById("sun").classList.remove("hidden");
-
-		if (animate) {
-			document.documentElement.classList.remove("dark");
-			document.getElementById("sun").classList.add("rising");
-		}
-	}, timeout);
+	document.documentElement.classList.remove("dark");
 }
 
-function showNight(animate) {
-	document.getElementById("moon").classList.remove("setting");
-	document.getElementById("sun").classList.remove("rising");
+function showNight() {
+	document.getElementById("nightText").classList.remove("hidden");
+	document.getElementById("dayText").classList.add("hidden");
 
-	let timeout = 0;
+	document.getElementById("sun").classList.add("hidden");
+	document.getElementById("moon").classList.remove("hidden");
 
-	if (animate) {
-		timeout = 500;
-
-		document.getElementById("sun").classList.add("setting");
-	}
-
-	setTimeout(() => {
-		document.getElementById("nightText").classList.remove("hidden");
-		document.getElementById("dayText").classList.add("hidden");
-
-		document.getElementById("sun").classList.add("hidden");
-		document.getElementById("moon").classList.remove("hidden");
-
-		if (animate) {
-			document.documentElement.classList.add("dark");
-			document.getElementById("moon").classList.add("rising");
-		}
-	}, timeout);
+	document.documentElement.classList.add("dark");
 }
 
 window.applyMenuItemClasses = () => {
