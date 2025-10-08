@@ -8,6 +8,14 @@ export default defineConfig({
 	adapter: cloudflare({
 		platformProxy: {
 			enabled: true
+		},
+		routes: {
+			exclude: [
+				"/_astro/*",
+				"/favicon.ico",
+				"/robots.txt",
+				"/assets/**/*"
+			]
 		}
 	}),
 	integrations: [tailwind()],
