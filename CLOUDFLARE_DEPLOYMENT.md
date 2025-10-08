@@ -136,6 +136,13 @@ export const prerender = false;
 - 确保所有依赖都已正确安装
 - 查看构建日志中的错误信息
 
+### 锁文件不匹配错误
+如果遇到 `ERR_PNPM_OUTDATED_LOCKFILE` 错误：
+1. 确保 `package.json` 和锁文件同步
+2. 本地运行 `npm install` 更新 `package-lock.json`
+3. 提交更新后的锁文件到 Git 仓库
+4. 如果使用 pnpm，确保移除 `packageManager` 字段或使用 npm
+
 ### API 路由不工作
 - 确保 API 文件包含 `export const prerender = false;`
 - 检查 `_redirects` 文件配置是否正确
