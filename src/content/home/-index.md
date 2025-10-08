@@ -13,18 +13,12 @@ github_proxy:
       fallback_to_static: true
     # 静态配置作为fallback
     options:
-      - value: "gh-proxy.com"
-        name: "gh-proxy.com"
+      - value: "https://gh-proxy.com"
+        name: "主站gh-proxy"
         default: true
         status: "active"
         speed: 5
-        description: "稳定快速的GitHub代理服务"
-      - value: "ghproxy.net"
-        name: "ghproxy.net"
-        default: false
-        status: "active"
-        speed: 4
-        description: "可靠的GitHub镜像服务"
+        description: "国内优选和V6支持请使用：https://v6.gh-proxy.com/"
   input_placeholder: "贴入 Github 文件链接"
   button_text: "生成链接"
   warning_notice:
