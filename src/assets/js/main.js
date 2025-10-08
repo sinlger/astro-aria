@@ -232,7 +232,7 @@ async function copyToClipboard (inputId, button) {
 			textArea.select();
 
 			try {
-				document.execCommand('copy');
+				// document.execCommand('copy');
 			} catch (err) {
 				console.error('复制失败:', err);
 				showCopyFeedback(button, '复制失败', false);
