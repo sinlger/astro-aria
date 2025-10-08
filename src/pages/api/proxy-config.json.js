@@ -1,6 +1,9 @@
 // 直接导入 JSON 数据，兼容 Cloudflare 环境
 import sourceData from '../../assets/json/source.json';
 
+// 配置为服务端渲染，适配 Cloudflare Pages Functions
+export const prerender = false;
+
 // 测试单个URL的延迟（优化版本）
 async function testProxyLatency(url, timeout = 2000) {
   try {

@@ -1,0 +1,11 @@
+name = "astro-aria"
+compatibility_date = "2024-10-08"
+
+[build]
+command = "npm run build"
+
+[env.production]
+name = "astro-aria"
+
+[env.preview]
+name = "astro-aria-preview"
