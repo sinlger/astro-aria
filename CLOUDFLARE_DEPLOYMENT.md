@@ -138,10 +138,11 @@ export const prerender = false;
 
 ### 锁文件不匹配错误
 如果遇到 `ERR_PNPM_OUTDATED_LOCKFILE` 错误：
-1. 确保 `package.json` 和锁文件同步
-2. 本地运行 `npm install` 更新 `package-lock.json`
-3. 提交更新后的锁文件到 Git 仓库
-4. 如果使用 pnpm，确保移除 `packageManager` 字段或使用 npm
+1. 确保 `package.json` 和 `pnpm-lock.yaml` 同步
+2. 本地安装 pnpm：`npm install -g pnpm`
+3. 运行 `pnpm install` 更新 `pnpm-lock.yaml`
+4. 提交更新后的锁文件到 Git 仓库
+5. 确保 `package.json` 中包含 `"packageManager": "pnpm@9.12.2"`
 
 ### API 路由不工作
 - 确保 API 文件包含 `export const prerender = false;`
