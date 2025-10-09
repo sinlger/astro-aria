@@ -2,6 +2,7 @@
 layout: ../../layouts/post.astro
 title: Solving Vercel Analytics Blocked by AdBlock Issue
 description: Solving Vercel Analytics Blocked by AdBlock Issue
+keywords: Vercel Analytics, AdBlock, Blocked, Issue, Solving
 dateFormatted: Jun 6, 2024
 ---
 

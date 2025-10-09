@@ -1,5 +1,9 @@
 ---
 import { getCollection } from "astro:content";
+import Layout from "../../layouts/post.astro";
+
+// 添加预渲染配置，解决动态路由问题
+export const prerender = true;
 
 export async function getStaticPaths() {
 	const postEntries = await getCollection("post");
@@ -13,4 +17,6 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Content />
+<Layout frontmatter={entry.data}>
+  <Content />
+</Layout>
