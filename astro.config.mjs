@@ -5,6 +5,9 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
 	output: "server",
+	markdown: {
+		// remarkPlugins: [remarkLint, remarkPresetLintRecommended],
+	},
 	adapter: cloudflare({
 		platformProxy: {
 			enabled: true

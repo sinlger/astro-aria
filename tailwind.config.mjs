@@ -3,7 +3,50 @@ export default {
 	darkMode: "class",
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
-		extend: {},
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						'code::before': {
+							content: '""',
+						},
+						'code::after': {
+							content: '""',
+						},
+						// 只对内联代码应用背景样式（不在 pre 标签内的 code）
+						'code:not(pre code)': {
+							backgroundColor: '#f3f4f6',
+							padding: '0.125rem 0.25rem',
+							borderRadius: '0.25rem',
+							fontSize: '0.875em',
+							fontWeight: '400',
+						},
+						// 确保代码块中的代码保持原样
+						'pre code': {
+							backgroundColor: 'transparent',
+							padding: '0',
+							borderRadius: '0',
+							fontSize: 'inherit',
+							fontWeight: 'inherit',
+						},
+					},
+				},
+				invert: {
+					css: {
+						// 暗色模式下只对内联代码应用样式
+						'code:not(pre code)': {
+							backgroundColor: '#374151',
+							color: '#f9fafb',
+						},
+						// 确保代码块在暗色模式下也保持原样
+						'pre code': {
+							backgroundColor: 'transparent',
+							color: 'inherit',
+						},
+					},
+				},
+			},
+		},
 	},
 	plugins: [require("@tailwindcss/typography")],
 };
