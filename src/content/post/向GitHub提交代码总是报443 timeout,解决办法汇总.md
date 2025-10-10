@@ -2,7 +2,7 @@
 title: 向 GitHub 提交代码时遇到 443 错误，如何定位错误与解决办法
 description: 向 GitHub 提交代码时遇到 443 错误（通常指连接超时或被阻止）是一个比较常见的问题，主要是由于网络环境限制导致的。
 keywords: Vercel Analytics, AdBlock, Blocked, Issue, Solving
-dateFormatted: Jun 6, 2024
+dateFormatted: Jun 6, 2025
 ---
 
 在国内向 **GitHub** 提交代码时遇到 **443 错误**（通常指连接超时或被阻止）是一个比较常见的问题，主要是由于网络环境限制导致的。

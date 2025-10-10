@@ -2,7 +2,7 @@
 title: 都2025年了，GitHub还是打不开怎么办：DNS、Hosts 与网络故障排除
 description: GitHub 无法访问？别担心！这篇文章提供了最全面、最有效的解决方案，教你如何通过修改 hosts 文件、切换协议、检查网络设置等方法，快速恢复对 GitHub 的正常访问。
 keywords: GitHub 无法访问, GitHub 打不开, hosts 文件修改, DNS 解析, GitHub 故障排除, Git 连接失败, SSH/HTTPS 切换
-dateFormatted: Jun 6, 2025
+dateFormatted: Jan 15, 2025
 ---
 
 

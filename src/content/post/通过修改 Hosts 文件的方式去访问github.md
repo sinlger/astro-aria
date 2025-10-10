@@ -1,11 +1,9 @@
 ---
-title: 如何寻找合适的GitHub IP，加速GitHub 访问
+title: 轻松加速 GitHub 访问速度：Hosts 文件修改终极指南
 description: 还在为 GitHub 访问速度慢烦恼？本文教你如何通过修改本地 Hosts 文件，查询并获取 GitHub、Fastly CDN 的最佳 IP 地址，彻底解决访问延迟和图片加载缓慢的问题。。
 keywords: GitHub 加速, Hosts 文件, GitHub 访问慢, 解决 GitHub 慢, Fastly CDN IP, Hosts 配置, DNS 缓存刷新, github.global.ssl.fastly.net, 提高 GitHub 速度
-dateFormatted: Jun 6, 2025
+dateFormatted: Jun 5, 2025
 ---
-
-## 轻松加速 GitHub 访问速度：Hosts 文件修改终极指南
 
 想克隆代码或查看项目时，GitHub 访问速度慢如蜗牛？你不是一个人！在国内特定的网络环境下，直接访问 GitHub 及其资源加载网络（CDN）常遇到瓶颈。
 
