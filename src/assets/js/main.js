@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	initGithubProxyButton();
 	// 初始化远程代理配置
 	initRemoteProxyConfig();
+	// 初始化自定义代理下拉框交互
+	initCustomProxyDropdown();
 });
 
 // window.toggleDarkMode = function(){
@@ -468,6 +470,18 @@ function updateProxySelector(options) {
 	// 清空现有选项
 	proxySelector.innerHTML = '';
 
+	// 预置自动与备用选项，确保交互正常
+	const autoOption = document.createElement('option');
+	autoOption.value = 'auto';
+	autoOption.textContent = '自动选择最佳节点';
+	autoOption.selected = true;
+	proxySelector.appendChild(autoOption);
+
+	const fallbackOption = document.createElement('option');
+	fallbackOption.value = 'auto-fallback';
+	fallbackOption.textContent = '自动选择备用节点';
+	proxySelector.appendChild(fallbackOption);
+
 	// 添加新选项
 	options.forEach(option => {
 		const optionElement = document.createElement('option');
@@ -479,10 +493,120 @@ function updateProxySelector(options) {
 			optionElement.selected = true;
 		}
 		
-		proxySelector.appendChild(optionElement);
+	proxySelector.appendChild(optionElement);
 	});
 
+	// 更新自定义下拉框显示
+	updateCustomProxyDropdown(options);
+
 	console.log(`Updated proxy selector with ${options.length} options`);
+}
+
+/**
+ * 初始化自定义代理下拉框交互
+ */
+function initCustomProxyDropdown() {
+	const dropdownHeader = document.getElementById('proxy-dropdown-header');
+	const optionsList = document.getElementById('proxy-options-list');
+	const selectedText = document.getElementById('selected-proxy-text');
+	const hiddenSelect = document.getElementById('proxy-selector');
+
+	if (!dropdownHeader || !optionsList || !selectedText || !hiddenSelect) {
+		console.warn('Custom proxy dropdown elements not found');
+		return;
+	}
+
+	// 点击头部显示/隐藏选项列表
+	dropdownHeader.addEventListener('click', function(e) {
+		e.stopPropagation();
+		optionsList.classList.toggle('hidden');
+	});
+
+	// 点击页面其他地方关闭下拉框
+	document.addEventListener('click', function(e) {
+		if (!document.getElementById('proxy-dropdown')?.contains(e.target)) {
+			optionsList.classList.add('hidden');
+		}
+	});
+}
+
+/**
+ * 根据接口数据更新自定义下拉框选项
+ */
+function updateCustomProxyDropdown(options) {
+	const optionsList = document.getElementById('proxy-options-list');
+	const selectedText = document.getElementById('selected-proxy-text');
+	const hiddenSelect = document.getElementById('proxy-selector');
+
+	if (!optionsList || !selectedText || !hiddenSelect) return;
+
+	// 保留前两个自动选项
+	const autoOptions = Array.from(optionsList.querySelectorAll('.proxy-option')).slice(0, 2);
+	optionsList.innerHTML = '';
+	autoOptions.forEach(opt => optionsList.appendChild(opt));
+
+	// 添加接口返回的选项
+	options.forEach(option => {
+		const optionDiv = document.createElement('div');
+		optionDiv.className = 'proxy-option flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700';
+		optionDiv.setAttribute('data-value', option.value);
+
+		const leftDiv = document.createElement('div');
+		leftDiv.className = 'flex items-center';
+
+		const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+		svg.setAttribute('class', 'w-5 h-5 mr-2 text-neutral-600 dark:text-neutral-300');
+		svg.setAttribute('fill', 'none');
+		svg.setAttribute('stroke', 'currentColor');
+		svg.setAttribute('viewBox', '0 0 24 24');
+
+		const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+		path.setAttribute('stroke-linecap', 'round');
+		path.setAttribute('stroke-linejoin', 'round');
+		path.setAttribute('stroke-width', '2');
+		path.setAttribute('d', 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064');
+
+		svg.appendChild(path);
+		leftDiv.appendChild(svg);
+
+		const span = document.createElement('span');
+		span.className = 'text-neutral-800 dark:text-neutral-200';
+		span.textContent = option.name;
+		leftDiv.appendChild(span);
+
+		optionDiv.appendChild(leftDiv);
+
+		const speedSpan = document.createElement('span');
+		speedSpan.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+		speedSpan.textContent = '极速';
+		optionDiv.appendChild(speedSpan);
+
+		// 点击事件：更新显示文本和隐藏select
+		optionDiv.addEventListener('click', function() {
+			const value = this.getAttribute('data-value');
+			const text = this.querySelector('span').textContent;
+			selectedText.textContent = text;
+
+			for (let i = 0; i < hiddenSelect.options.length; i++) {
+				if (hiddenSelect.options[i].value === value) {
+					hiddenSelect.options[i].selected = true;
+					break;
+				}
+			}
+
+			optionsList.classList.add('hidden');
+			const event = new Event('change');
+			hiddenSelect.dispatchEvent(event);
+		});
+
+		optionsList.appendChild(optionDiv);
+	});
+
+	// 同步选中文本
+	const selectedOption = hiddenSelect.options[hiddenSelect.selectedIndex];
+	if (selectedOption) {
+		selectedText.textContent = selectedOption.textContent;
+	}
 }
 
 /**

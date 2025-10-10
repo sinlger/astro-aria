@@ -1,5 +1,9 @@
-
------
+---
+title: 解决国内访问 GitHub.com 的准确方法
+description: 通过修改hosts文件绕过DNS污染，详细介绍如何查询GitHub最新IP地址并配置本地hosts文件，解决国内用户访问GitHub连接失败的问题。
+keywords: GitHub, hosts文件, DNS污染, IP地址, 国内访问, 网络连接, 域名解析, 翻墙替代方案
+dateFormatted: Jan 15, 2025
+---
 
 ## 解决国内访问 GitHub.com 的准确方法
 

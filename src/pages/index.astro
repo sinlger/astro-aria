@@ -65,7 +65,7 @@ const {  github_proxy, service_tabs } = homepage?.data as Homepage;
     <div class="container">
       <div class="flex justify-center">
         <div class="text-center">
-          <h1 class="mb-4 text-4xl md:text-5xl font-bold">{github_proxy.title}</h1>
+          <h1 class="mb-4 text-4xl md:text-5xl font-bold dark:text-neutral-100">{github_proxy.title}</h1>
           <p class="mb-8 text-lg text-neutral-600 dark:text-neutral-300">
             {github_proxy?.sub_title}
           </p>
@@ -79,33 +79,51 @@ const {  github_proxy, service_tabs } = homepage?.data as Homepage;
                 {github_proxy.proxy_selector.label}
               </label>
               <div class="relative">
-                <select
-                  id="proxy-selector"
-                  class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 appearance-none cursor-pointer"
-                >
-                  {github_proxy.proxy_selector.options?.map((option) => (
-                    <option value={option.value} selected={option.default}>
-                      {option.name}
-                    </option>
-                  ))}
-                </select>
-                <div
-                  class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none"
-                >
-                  <svg
-                    class="w-5 h-5 text-neutral-500 dark:text-neutral-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"></path>
-                  </svg>
+                <div id="proxy-dropdown" class="w-full border border-neutral-200 dark:border-neutral-700 rounded-lg shadow-sm bg-white dark:bg-neutral-800 overflow-hidden">
+                  <!-- 下拉框头部 -->
+                  <div id="proxy-dropdown-header" class="flex items-center justify-between px-4 py-3 cursor-pointer">
+                    <div class="flex items-center">
+                      <span id="selected-proxy-text" class="text-neutral-800 dark:text-neutral-200 font-medium">自动选择最佳节点</span>
+                    </div>
+                    <svg class="w-5 h-5 text-neutral-500 dark:text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </div>
+                  
+                  <!-- 下拉选项列表 -->
+                  <div id="proxy-options-list" class="hidden absolute w-full z-50 mt-1 border border-neutral-200 dark:border-neutral-700 rounded-lg shadow-lg bg-white dark:bg-neutral-800 overflow-hidden">
+                    <!-- 自动选择选项 -->
+                    <div class="proxy-option flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700" data-value="auto">
+                      <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-neutral-600 dark:text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <span class="text-neutral-800 dark:text-neutral-200">自动选择最佳节点</span>
+                      </div>
+                    </div>
+                    
+                    <!-- 自动选择备用节点 -->
+                    <div class="proxy-option flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700" data-value="auto-fallback">
+                      <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-neutral-600 dark:text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span class="text-neutral-800 dark:text-neutral-200">自动选择备用节点</span>
+                      </div>
+                    </div>
+                    
+                    <!-- 其余选项由 main.js 通过接口填充 -->
+                  </div>
                 </div>
+                
+                <!-- 隐藏的原始select元素，用于表单提交 -->
+                <select id="proxy-selector" class="hidden">
+                  <option value="auto" selected>自动选择最佳节点</option>
+                  <option value="auto-fallback">自动选择备用节点</option>
+                </select>
               </div>
+              
+              <!-- 交互逻辑已迁移至 main.js，并通过接口初始化选项 -->
             </div>
           )}
 
