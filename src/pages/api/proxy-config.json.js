@@ -82,14 +82,22 @@ export async function GET() {
       .filter(item => item.status === 'active') // 只选择测试通过的代理
       .sort((a, b) => a.latency - b.latency) // 按延迟排序（延迟越低越好）
       .slice(0, 20) // 只取前20个延迟最低的
-      .map((item, index) => ({
-        value: item.url,
-        name: `${item.url.replace('https://', '')} (${item.latency}ms)`,
-        default: index === 0, // 第一个设为默认
-        status: item.status,
-        latency: item.latency,
-        description: `快速测试延迟: ${item.latency}ms | 服务器: ${item.server} | 位置: ${item.location || '未知'}`
-      }));
+      .map((item, index) => {
+        // 提取一级域名
+        const domain = item.url.replace(/^https?:\/\//, '').split('/')[0];
+        const location = item.location || '未知位置';
+        const displayName = `${location} (${domain})`;
+        
+        return {
+          value: item.url,
+          name: displayName,
+          url: item.url,
+          default: index === 0, // 第一个设为默认
+          status: item.status,
+          latency: item.latency,
+          description: `快速测试延迟: ${item.latency}ms | 服务器: ${item.server} | 位置: ${item.location || '未知'}`
+        };
+      });
 
     // 计算测试统计信息
     const totalTested = testedData.length;

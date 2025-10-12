@@ -3,7 +3,7 @@
         "url": "https://gh.xx9527.cn",
         "server": "cloudflare",
         "ip": "104.21.95.182",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -11,7 +11,7 @@
         "url": "https://gh.jasonzeng.dev",
         "server": "cloudflare",
         "ip": "172.67.221.90",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -19,7 +19,7 @@
         "url": "https://gh.monlor.com",
         "server": "cloudflare",
         "ip": "172.67.218.250",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -27,7 +27,7 @@
         "url": "https://fastgit.cc",
         "server": "cloudflare",
         "ip": "104.21.112.1",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -35,7 +35,7 @@
         "url": "https://github.tbedu.top",
         "server": "cloudflare",
         "ip": "172.67.142.239",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -43,7 +43,7 @@
         "url": "https://github.geekery.cn",
         "server": "cloudflare",
         "ip": "104.21.13.4",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -51,7 +51,7 @@
         "url": "https://gh-proxy.linioi.com",
         "server": "cloudflare",
         "ip": "104.21.17.44",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -59,7 +59,7 @@
         "url": "https://firewall.lxstd.org",
         "server": "cloudflare",
         "ip": "104.21.80.1",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -67,7 +67,7 @@
         "url": "https://github.7boe.top",
         "server": "nginx/1.22.1",
         "ip": "47.238.61.62",
-        "location": "Hong Kong  Hong Kong",
+        "location": "美国 加利福尼亚 圣克拉拉",
         "latency": 0,
         "speed": 0
     },
@@ -75,7 +75,7 @@
         "url": "https://mirrors.chenby.cn",
         "server": "cloudflare",
         "ip": "104.21.25.253",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -83,7 +83,7 @@
         "url": "https://ghproxy.cc",
         "server": "cloudflare",
         "ip": "172.67.159.58",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -91,7 +91,7 @@
         "url": "https://github.ednovas.xyz",
         "server": "cloudflare",
         "ip": "172.67.145.204",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -99,7 +99,7 @@
         "url": "https://ghfile.geekertao.top",
         "server": "cloudflare",
         "ip": "104.21.32.1",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -107,7 +107,7 @@
         "url": "https://ghp.keleyaa.com",
         "server": "cloudflare",
         "ip": "104.21.46.13",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -115,7 +115,7 @@
         "url": "https://mirrors.chenby.cn",
         "server": "cloudflare",
         "ip": "104.21.25.253",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -123,7 +123,7 @@
         "url": "https://ghproxy.cn",
         "server": "cloudflare",
         "ip": "172.67.159.58",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -131,7 +131,7 @@
         "url": "https://github.geekery.cn",
         "server": "cloudflare",
         "ip": "104.21.13.4",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -139,7 +139,7 @@
         "url": "https://github.wuzhij.com",
         "server": "cloudflare",
         "ip": "104.21.64.99",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -147,7 +147,7 @@
         "url": "https://gh.cache.cloudns.org",
         "server": "cloudflare",
         "ip": "104.21.62.139",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -155,7 +155,7 @@
         "url": "https://gh.chjina.com",
         "server": "cloudflare",
         "ip": "104.21.59.45",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -163,7 +163,7 @@
         "url": "https://ghproxy.monkeyray.net",
         "server": "nginx",
         "ip": "199.168.139.82",
-        "location": "United States California Los Angeles",
+        "location": "美国 加利福尼亚",
         "latency": 0,
         "speed": 0
     },
@@ -171,7 +171,7 @@
         "url": "https://ghpxy.hwinzniej.top",
         "server": "cloudflare",
         "ip": "104.21.74.36",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -179,7 +179,7 @@
         "url": "https://gp.zkitefly.eu.org",
         "server": "cloudflare",
         "ip": "172.67.207.206",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -187,7 +187,7 @@
         "url": "https://ghproxy.imciel.com",
         "server": "cloudflare",
         "ip": "172.67.222.205",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -195,7 +195,7 @@
         "url": "https://gitproxy.mrhjx.cn",
         "server": "cloudflare",
         "ip": "104.21.16.1",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -203,7 +203,7 @@
         "url": "https://proxy.yaoyaoling.net",
         "server": "nginx",
         "ip": "104.233.162.24",
-        "location": "Japan Tokyo Tokyo",
+        "location": "美国 加利福尼亚 圣何塞",
         "latency": 0,
         "speed": 0
     },
@@ -211,7 +211,7 @@
         "url": "https://gitproxy.click",
         "server": "nginx/1.26.3",
         "ip": "47.238.88.250",
-        "location": "Hong Kong  Hong Kong",
+        "location": "美国 加利福尼亚 圣克拉拉",
         "latency": 0,
         "speed": 0
     },
@@ -219,7 +219,7 @@
         "url": "https://github.moeyy.xyz",
         "server": "cloudflare",
         "ip": "104.16.194.9",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -227,7 +227,7 @@
         "url": "https://gh.nxnow.top",
         "server": "nginx/1.22.1",
         "ip": "154.17.236.34",
-        "location": "United States California Los Angeles",
+        "location": "美国 弗吉尼亚",
         "latency": 0,
         "speed": 0
     },
@@ -235,7 +235,7 @@
         "url": "https://ghproxy.cxkpro.top",
         "server": "cloudflare",
         "ip": "104.21.80.1",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -243,7 +243,7 @@
         "url": "https://cf.ghproxy.cc",
         "server": "cloudflare",
         "ip": "172.67.159.58",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -251,7 +251,7 @@
         "url": "https://gh-proxy.ygxz.in",
         "server": "YGXZ-CDN-Cluster",
         "ip": "23.130.4.129",
-        "location": "United States California Los Angeles",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -259,7 +259,7 @@
         "url": "https://gh.zwy.me",
         "server": "openresty",
         "ip": "154.21.92.18",
-        "location": "United States California Los Angeles",
+        "location": "美国 加利福尼亚",
         "latency": 0,
         "speed": 0
     },
@@ -267,7 +267,7 @@
         "url": "https://gh.xxooo.cf",
         "server": "cloudflare",
         "ip": "104.21.211.91",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -275,7 +275,7 @@
         "url": "https://github.starrlzy.cn",
         "server": "nginx",
         "ip": "47.116.121.107",
-        "location": "中国 上海�?",
+        "location": "中国 上海 上海市",
         "latency": 0,
         "speed": 0
     },
@@ -283,7 +283,7 @@
         "url": "https://gh.7761.cf",
         "server": "cloudflare",
         "ip": "172.67.191.239",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -291,7 +291,7 @@
         "url": "https://hub.gitmirror.com",
         "server": "cloudflare",
         "ip": "104.16.0.147",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -299,7 +299,7 @@
         "url": "https://ghproxy.xiaopa.cc",
         "server": "cloudflare",
         "ip": "104.21.86.233",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -307,7 +307,7 @@
         "url": "https://gh.catmak.name",
         "server": "nginx",
         "ip": "140.238.18.229",
-        "location": "South Korea Seoul Seoul",
+        "location": "韩国 首尔 首尔",
         "latency": 0,
         "speed": 0
     },
@@ -315,7 +315,7 @@
         "url": "https://gh.944446.xyz",
         "server": "cloudflare",
         "ip": "172.67.155.166",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -323,7 +323,7 @@
         "url": "https://gh.bbxss.com",
         "server": "cloudflare",
         "ip": "172.67.174.179",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -331,7 +331,7 @@
         "url": "https://github.limoruirui.com",
         "server": "cloudflare",
         "ip": "104.21.64.1",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -339,7 +339,7 @@
         "url": "https://api-gh.muran.eu.org",
         "server": "cloudflare",
         "ip": "172.64.82.119",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -347,7 +347,7 @@
         "url": "https://gh.idayer.com",
         "server": "cloudflare",
         "ip": "172.67.190.155",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -355,7 +355,7 @@
         "url": "https://github-proxy.com",
         "server": "Apache/2.4.52 (Ubuntu)",
         "ip": "64.225.49.234",
-        "location": "United States New Jersey Clifton",
+        "location": "美国 佐治亚 亚特兰大",
         "latency": 0,
         "speed": 0
     },
@@ -363,7 +363,7 @@
         "url": "https://gh.zwnes.xyz",
         "server": "cloudflare",
         "ip": "172.67.212.139",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -371,7 +371,7 @@
         "url": "https://cdn.moran233.xyz",
         "server": "Caddy",
         "ip": "43.154.99.97",
-        "location": "Hong Kong  Hong Kong",
+        "location": "澳大利亚",
         "latency": 0,
         "speed": 0
     },
@@ -379,7 +379,7 @@
         "url": "https://gh.llkk.cc",
         "server": "cloudflare",
         "ip": "104.16.194.9",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -387,7 +387,7 @@
         "url": "https://gh-proxy.com",
         "server": "cloudflare",
         "ip": "172.67.132.181",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -395,7 +395,7 @@
         "url": "https://gh.ddlc.top",
         "server": "cloudflare",
         "ip": "104.19.89.51",
-        "location": "  ",
+        "location": "美国",
         "latency": 0,
         "speed": 0
     },
@@ -403,7 +403,7 @@
         "url": "https://g.blfrp.cn",
         "server": "nginx/1.14.1",
         "ip": "8.218.101.194",
-        "location": "Hong Kong  Hong Kong",
+        "location": "中国",
         "latency": 0,
         "speed": 0
     },
@@ -411,7 +411,7 @@
         "url": "https://slink.ltd",
         "server": "cloudflare",
         "ip": "172.67.220.28",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -419,7 +419,7 @@
         "url": "https://ghproxy.1888866.xyz",
         "server": "cloudflare",
         "ip": "172.67.207.44",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -427,7 +427,7 @@
         "url": "https://ghproxy.cianogame.top",
         "server": "Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0",
         "ip": "185.199.111.133",
-        "location": "United States California ",
+        "location": "美国 华盛顿 西雅图",
         "latency": 0,
         "speed": 0
     },
@@ -435,7 +435,7 @@
         "url": "https://github.linxi.info",
         "server": "Tengine",
         "ip": "180.163.140.237",
-        "location": "中国 上海�?",
+        "location": "中国 上海 上海市",
         "latency": 0,
         "speed": 0
     },
@@ -443,7 +443,7 @@
         "url": "https://mirror.ghproxy.com",
         "server": "nginx",
         "ip": "140.238.17.201",
-        "location": "South Korea Seoul Seoul",
+        "location": "韩国 首尔 首尔",
         "latency": 0,
         "speed": 0
     },
@@ -451,7 +451,7 @@
         "url": "https://down.npee.cn",
         "server": "cloudflare",
         "ip": "172.67.159.112",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     },
@@ -459,7 +459,7 @@
         "url": "https://github.3x25.com",
         "server": "openresty",
         "ip": "140.245.54.48",
-        "location": "Singapore  Singapore",
+        "location": "美国 马萨诸塞",
         "latency": 0,
         "speed": 0
     },
@@ -467,7 +467,7 @@
         "url": "https://gh.con.sh",
         "server": "cloudflare",
         "ip": "172.66.46.220",
-        "location": "  ",
+        "location": "美国 加利福尼亚 旧金山",
         "latency": 0,
         "speed": 0
     }

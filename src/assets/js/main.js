@@ -474,13 +474,19 @@ function updateProxySelector(options) {
 	const autoOption = document.createElement('option');
 	autoOption.value = 'auto';
 	autoOption.textContent = '自动选择最佳节点';
-	autoOption.selected = true;
 	proxySelector.appendChild(autoOption);
 
 	const fallbackOption = document.createElement('option');
 	fallbackOption.value = 'auto-fallback';
 	fallbackOption.textContent = '自动选择备用节点';
 	proxySelector.appendChild(fallbackOption);
+
+	// 添加默认的 gh-proxy.com 选项
+	const defaultOption = document.createElement('option');
+	defaultOption.value = 'https://gh-proxy.com';
+	defaultOption.textContent = 'gh-proxy.com';
+	defaultOption.selected = true;
+	proxySelector.appendChild(defaultOption);
 
 	// 添加新选项
 	options.forEach(option => {
@@ -528,6 +534,58 @@ function initCustomProxyDropdown() {
 			optionsList.classList.add('hidden');
 		}
 	});
+
+	// 为所有现有的proxy-option元素添加点击事件
+	const existingOptions = optionsList.querySelectorAll('.proxy-option');
+	existingOptions.forEach(option => {
+		option.addEventListener('click', function() {
+			const value = this.getAttribute('data-value');
+			const text = this.querySelector('span').textContent;
+			selectedText.textContent = text;
+
+			// 更新隐藏select的选中状态
+			for (let i = 0; i < hiddenSelect.options.length; i++) {
+				if (hiddenSelect.options[i].value === value) {
+					hiddenSelect.options[i].selected = true;
+					break;
+				}
+			}
+
+			// 移除所有选项的选中样式
+			optionsList.querySelectorAll('.proxy-option').forEach(opt => {
+				opt.classList.remove('bg-neutral-50', 'dark:bg-neutral-700');
+			});
+			
+			// 为当前选项添加选中样式
+			this.classList.add('bg-neutral-50', 'dark:bg-neutral-700');
+
+			optionsList.classList.add('hidden');
+			const event = new Event('change');
+			hiddenSelect.dispatchEvent(event);
+		});
+	});
+}
+
+/**
+ * 根据延迟时间获取速度信息
+ */
+function getSpeedInfo(latency) {
+	if (latency < 500) {
+		return {
+			text: '急速',
+			className: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+		};
+	} else if (latency <= 1000) {
+		return {
+			text: '中等',
+			className: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
+		};
+	} else {
+		return {
+			text: '较慢',
+			className: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+		};
+	}
 }
 
 /**
@@ -576,10 +634,24 @@ function updateCustomProxyDropdown(options) {
 
 		optionDiv.appendChild(leftDiv);
 
+		// 右侧显示延迟信息
+		const rightDiv = document.createElement('div');
+		rightDiv.className = 'flex items-center space-x-2';
+
+		// 延迟数值
+		const latencySpan = document.createElement('span');
+		latencySpan.className = 'text-sm text-neutral-600 dark:text-neutral-400';
+		latencySpan.textContent = `${option.latency}ms`;
+		rightDiv.appendChild(latencySpan);
+
+		// 根据延迟时间设置速度标签和颜色
+		const speedInfo = getSpeedInfo(option.latency);
 		const speedSpan = document.createElement('span');
-		speedSpan.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-		speedSpan.textContent = '极速';
-		optionDiv.appendChild(speedSpan);
+		speedSpan.className = `text-xs px-2 py-1 rounded-full ${speedInfo.className}`;
+		speedSpan.textContent = speedInfo.text;
+		rightDiv.appendChild(speedSpan);
+
+		optionDiv.appendChild(rightDiv);
 
 		// 点击事件：更新显示文本和隐藏select
 		optionDiv.addEventListener('click', function() {

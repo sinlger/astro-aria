@@ -83,7 +83,7 @@ const {  github_proxy, service_tabs } = homepage?.data as Homepage;
                   <!-- 下拉框头部 -->
                   <div id="proxy-dropdown-header" class="flex items-center justify-between px-4 py-3 cursor-pointer">
                     <div class="flex items-center">
-                      <span id="selected-proxy-text" class="text-neutral-800 dark:text-neutral-200 font-medium">自动选择最佳节点</span>
+                      <span id="selected-proxy-text" class="text-neutral-800 dark:text-neutral-200 font-medium">gh-proxy.com</span>
                     </div>
                     <svg class="w-5 h-5 text-neutral-500 dark:text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -112,14 +112,26 @@ const {  github_proxy, service_tabs } = homepage?.data as Homepage;
                       </div>
                     </div>
                     
+                    <!-- gh-proxy.com 默认选项 -->
+                    <div class="proxy-option flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700 bg-neutral-50 dark:bg-neutral-700" data-value="https://gh-proxy.com">
+                      <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-neutral-600 dark:text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                        </svg>
+                        <span class="text-neutral-800 dark:text-neutral-200">gh-proxy.com</span>
+                      </div>
+                      <span class="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">默认</span>
+                    </div>
+                    
                     <!-- 其余选项由 main.js 通过接口填充 -->
                   </div>
                 </div>
                 
                 <!-- 隐藏的原始select元素，用于表单提交 -->
                 <select id="proxy-selector" class="hidden">
-                  <option value="auto" selected>自动选择最佳节点</option>
+                  <option value="auto">自动选择最佳节点</option>
                   <option value="auto-fallback">自动选择备用节点</option>
+                  <option value="https://gh-proxy.com" selected>gh-proxy.com</option>
                 </select>
               </div>
               
