@@ -4,6 +4,38 @@
 
 /* Add Your Custom CSS Here */
 
+/* 中文字体优化 */
+@layer base {
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Droid Sans Fallback", "Source Han Sans SC", "Noto Sans CJK SC";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    font-feature-settings: "kern" 1;
+    font-variant-ligatures: common-ligatures;
+  }
+  
+  /* 中文字符间距优化 */
+  .prose {
+    text-spacing: ideograph-alpha ideograph-numeric;
+  }
+  
+  /* 确保中文标点符号正确显示 */
+  .prose p,
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+}
+
 .prose img {
   border-radius: 30px;
 }

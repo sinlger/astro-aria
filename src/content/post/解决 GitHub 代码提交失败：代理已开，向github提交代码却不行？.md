@@ -1,11 +1,11 @@
 ---
-title: 解决 GitHub 代码提交失败：代理已开，Push 却不行？
+title: 解决 GitHub 代码提交失败：代理已开，向github提交代码却不行？
 description: 详细解析为什么开启代理后能访问GitHub网页却无法推送代码，提供HTTPS和SSH协议的完整解决方案，让Git正确通过代理与GitHub通信。
 keywords: GitHub, Git, 代理, Proxy, Push失败, HTTPS, SSH, 网络配置, 代码提交
 dateFormatted: Jan 15, 2025
 ---
 
-## 解决 GitHub 代码提交失败：代理已开，Push 却不行？
+## 解决 GitHub 代码提交失败：代理已开，向github提交代码却不行？
 
 在使用 **GitHub** 进行项目开发时，遇到一个非常令人困惑的问题：我已经开启了**代理（Proxy）**，可以**正常访问** GitHub 网页，甚至能拉取（pull）代码，但是**代码却无论如何都提交（push）不上去**。这是怎么回事？
 

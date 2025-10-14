@@ -4,6 +4,57 @@ export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				'sans': [
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"Segoe UI"',
+					'Roboto',
+					'"Helvetica Neue"',
+					'Arial',
+					'"Noto Sans"',
+					'"Liberation Sans"',
+					'sans-serif',
+					'"Apple Color Emoji"',
+					'"Segoe UI Emoji"',
+					'"Segoe UI Symbol"',
+					'"Noto Color Emoji"',
+					// 中文字体
+					'"PingFang SC"',
+					'"Hiragino Sans GB"',
+					'"Microsoft YaHei"',
+					'"WenQuanYi Micro Hei"',
+					'"Droid Sans Fallback"',
+					'"Source Han Sans SC"',
+					'"Noto Sans CJK SC"'
+				],
+				'serif': [
+					'Georgia',
+					'Cambria',
+					'"Times New Roman"',
+					'Times',
+					'serif',
+					// 中文衬线字体
+					'"Songti SC"',
+					'"SimSun"',
+					'"Source Han Serif SC"',
+					'"Noto Serif CJK SC"'
+				],
+				'mono': [
+					'"SF Mono"',
+					'Monaco',
+					'Inconsolata',
+					'"Roboto Mono"',
+					'"Source Code Pro"',
+					'Menlo',
+					'Consolas',
+					'"DejaVu Sans Mono"',
+					'monospace',
+					// 中文等宽字体
+					'"Source Han Sans HW SC"',
+					'"Noto Sans Mono CJK SC"'
+				]
+			},
 			typography: {
 				DEFAULT: {
 					css: {
